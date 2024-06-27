@@ -73,7 +73,27 @@ body {
     /* background: blue; */
     overflow-y: auto;
     height: 75vh;
+    color: white;
 }
+
+
+.description__item h3 {
+    color: var(--color-3);
+}
+.info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+.info img {
+    width: 60px;
+    height: 60px;
+}
+.info__item h4 {
+    color: var(--color-3);
+}
+
 
 .description__buttom {
     /* background: #00ff84; */

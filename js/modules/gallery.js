@@ -1,25 +1,23 @@
-export const nameRockets = (info)=>{
-    let plantilla = ""
-
-    plantilla+= /*html*/`
-    <div id="header__title" class="header__title">
-        <div class="load">${info.name}</div>
-    </div>
-    `
-    return plantilla
-    }
-
-export const infoRockets = (info)=>{
-    let plantilla = ""
-
-    plantilla+= /*html*/`
-    <div id="description__item" class="description__item">
-        <div class="load">${info.country}</div>
-        <div class="load">${info.description}</div>
-        <div class="load">The estimated cost per rocket launch ${info.cost_per_launch}</div>
-        <div class="load">The date of the first flight of the rocket ${info.first_flight}</div>
-        <div class="load">Read more about the rocket ${info.wikipedia}</div>
-    </div>
-    `   
-    return plantilla
+export const nameRocket = async (name) => {
+    document.querySelector("#header__title").innerHTML = name;
 }
+
+export const moreInfoRocket = async (moreInfo) => {
+    console.log(moreInfo);
+    document.querySelector("#description__item").innerHTML = /*html*/`
+        <h3>Description</h3>
+        <br>
+        <p>${moreInfo.description}</p>
+        <br>
+        <div class="info">
+            <img src="/storage/img/world.png">
+            <div class="info__item">
+                <h4>Country</h4>
+                <p>${moreInfo.country}</p>
+            </div>
+        </div>
+    ` ;
+
+}
+
+
