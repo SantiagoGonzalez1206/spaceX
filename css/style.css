@@ -74,30 +74,60 @@ body {
 }
 
 .description__item {
-    /* background: blue; */
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 75vh;
     color: white;
+}
+
+.description__all{
+    text-align: center;
 }
 
 
 .description__item h3 {
     color: var(--color-3);
 }
-.info {
+#info {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin: 10px 0;
 }
 .info img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
-.info__item h4 {
+.info__item {
+    display: flex;
     color: var(--color-3);
+    margin-left: 10px;
 }
 
+.info__item p{
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info__item_text{
+    margin-left: 20px;
+}
+
+.more__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+.more__info h4{
+    font-size: 25px;
+}
 
 .description__buttom {
     /* background: #00ff84; */
@@ -390,7 +420,13 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--color--two);
+    width: 30px;
 }
+
+.footer img{
+    width: 30px;
+}
+
 .select{
     padding: 8px 0;
     border-bottom: 4px solid var(--color--five) ;
@@ -492,3 +528,36 @@ progress[value]::-moz-progress-bar {
     border-radius: 10em;
     background: var(--color);
 }
+
+.information__buttom {
+    display: flex;
+    justify-content: center;
+  }
+  
+.information__buttom a {
+color: var(--color--four);
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color 0.3s, color 0.3s;
+border: 1px solid #ddd;
+margin: 0 4px;
+border-radius: 50%;
+}
+
+.information__buttom a:hover {
+background-color: var(--color--one--rgba);
+color: white;
+}
+
+.information__buttom a.active {
+background-color: #007bff;
+color: white;
+border: 1px solid #007bff;
+}
+
+.information__buttom a.disabled {
+color: #ccc;
+pointer-events: none;
+}
+

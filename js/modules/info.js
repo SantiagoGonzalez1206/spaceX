@@ -159,7 +159,7 @@ export const getRocketMoreInfoById = async (id) => {
               "_id": id
             },
             "options": {
-            "select": " cost_per_launch country wikipedia description"
+            "select": "type cost_per_launch country wikipedia description first_flight "
             }
         })
     };
