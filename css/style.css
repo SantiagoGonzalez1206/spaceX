@@ -11,10 +11,12 @@
 
 
 body {
-    background-image: url('../storage/imgs/space.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-color: #f2f2f2; 
+    background-image: url('../storage/imgs/space1.gif');
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 *::-webkit-scrollbar {
@@ -287,8 +289,10 @@ body {
     /* background: orange; */
     grid-area: colum__2;
     display: flex;
-    overflow-x: auto;
     align-items: center;
+    width: 305px;
+    height: 190px;
+    margin-left: 40px;
 }
 
 .section__image>.carousel__item {
@@ -299,8 +303,8 @@ body {
 }
 
 .section__image>.carousel__item img {
-    width: 305px;
-    height: 190px;
+    width: 105px;
+    height: 100px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0px 0px 10px var(--color--one);
@@ -562,3 +566,22 @@ color: #ccc;
 pointer-events: none;
 }
 
+.vacuum{
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.interno{
+    display: flex;
+    flex-direction: row;
+}
+
+.externo{
+    display: flex;
+    flex-direction: column;
+}
+
+.medio{
+    display: flex;
+    flex-direction: column;
+}

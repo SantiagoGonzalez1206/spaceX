@@ -159,7 +159,7 @@ export const getRocketMoreInfoById = async (id) => {
               "_id": id
             },
             "options": {
-            "select": "engines.isp.vacuum engines.isp.sea_level first_stage.engines type cost_per_launch country wikipedia description first_flight "
+            "select": "flickr_images engines.isp.vacuum engines.isp.sea_level first_stage.engines type cost_per_launch country wikipedia description first_flight "
             }
         })
     };
@@ -169,3 +169,4 @@ export const getRocketMoreInfoById = async (id) => {
     console.log(docs);
     return docs[0];
 }
+
