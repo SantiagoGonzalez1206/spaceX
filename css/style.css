@@ -8,12 +8,13 @@
     font-family: "Roboto-Regular";
 }
 
+
+
 body {
     background-image: url('../storage/imgs/space.jpg');
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    /* También puedes ajustar otras propiedades como el color de fondo, por si la imagen no se carga */
-    background-color: #f2f2f2; /* Color de fondo de respaldo */
+    background-size: cover; 
+    background-position: center; 
+    background-color: #f2f2f2; 
 }
 
 *::-webkit-scrollbar {
@@ -138,7 +139,6 @@ body {
 }
 
 .description__container {
-    /* background: violet; */
     display: flex;
     gap: 10px;
     margin: 0 var(--layout-description-container-x);
@@ -190,6 +190,7 @@ body {
 .item__progress__bar {
     color: var(--color--five);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -202,13 +203,13 @@ body {
         transparent 85% 100%), 
         conic-gradient(var(--color--three) 
         80%, 
-        transparent 0);  
-    transform: rotate(180deg); 
+        transparent 0);   
+    background: #0011ff;
   }
 .progress__value{
     display: flex;
     flex-direction: column;
-    transform: rotate(180deg); 
+    transform: rotate(1deg); 
 }
 /*  */
 .section__information__container {
@@ -551,9 +552,9 @@ color: white;
 }
 
 .information__buttom a.active {
-background-color: #007bff;
+background-color: #0400ff;
 color: white;
-border: 1px solid #007bff;
+border: 1px solid #0400ff;
 }
 
 .information__buttom a.disabled {

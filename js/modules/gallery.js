@@ -45,7 +45,12 @@ export const moreInfoRocket = async (moreInfo) => {
     console.log(moreInfo);
     document.querySelector("#main__section").innerHTML = /*html*/`
     <article id="section__information__1" class="section__information__1">
-        <div class="load" style="height: 150px;">${moreInfo.type}</div>
+        <div class="item__progress__bar" style="background: 
+        radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
+        conic-gradient(from 180deg, #0400ff ${moreInfo.first_stage.engines}%, rgba(255, 192, 203, 0) 0);  "><b>Engines:</b><br>${moreInfo.first_stage.engines}</div>
+        <div class="item__progress__bar" style="background: 
+        radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
+        conic-gradient(from 180deg, #0400ff 25%, rgba(255, 192, 203, 0) 0);  "><b>vacuum:<br><br></b>${moreInfo.engines.isp.vacuum}<br></div>
     </article>
     <article class="section__information__container">
         <div class="section__information__2">

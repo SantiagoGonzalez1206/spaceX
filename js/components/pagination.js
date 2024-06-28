@@ -12,6 +12,16 @@ export const paginationRockets = async () => {
     return html.join("");
 }
 
+    export const asd = async() => {
+
+        const rocketName = await getRocketNameById("5e9d0d95eda69955f709d1eb")
+        const rocketMoreInfo = await getRocketMoreInfoById("5e9d0d95eda69955f709d1eb");
+        console.log(rocketMoreInfo);
+        
+        await nameRocket(rocketName);
+        await infoRocket(rocketMoreInfo);
+        await moreInfoRocket(rocketMoreInfo)
+    }
 
 export const setupPagination = async () => {
     document.querySelector("#paginacion").addEventListener("click", async (e) => {
