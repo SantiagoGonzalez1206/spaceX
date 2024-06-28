@@ -32,10 +32,7 @@ export const infoRocket = async (moreInfo) => {
                     </div>
                 </div>
             </div>
-            <div class="more__info">
-                <h4> For more info: </h4>
-                <a href="${moreInfo.wikipedia}">Wikipedia</a>
-            </div>
+            
     ` ;
 
 }
@@ -52,60 +49,132 @@ export const moreInfoRocket = async (moreInfo) => {
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
         conic-gradient(from 180deg, #0400ff ${moreInfo.diameter.meters}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Diameter:</b>${moreInfo.diameter.meters} Meters <div class="externo">${moreInfo.diameter.feet} feets </div></div></div></div></div>
+        <div class="item__progress__bar" style="background: 
+        radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
+        conic-gradient(from 180deg, #0400ff ${(moreInfo.mass.kg)/20000}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Mass:</b>${moreInfo.mass.kg} Kg <div class="externo">${moreInfo.mass.lb} Lb </div></div></div></div></div>
     </article>
     <article class="section__information__container">
         <div class="section__information__2">
-            <div>
-                <div class="load" style="height: 150px;">${moreInfo.type}</div>
-            </div>
-            <div id="information__table__1" class="information__table__1">
-                <div class="load" style="height: 160px;">
-                    <div class="info__table1">
-                        <h2>Engines</h2>
-                        <hr>
-                        <div class="info__data">
-                            <div class="data__int">
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                            <div class="data__int">
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                            <div class="data__int">
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                            <div class="data__int">
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                            <div class="data__int">
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                            <div class="data__int"> 
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                            <div class="data__int">
-                                <p>si</p>
-                                <p>${moreInfo.engines.isp.vacuum}</p>
-                            </div>
-                        </div>
+            <div class="info__table1">
+                <h2>Engines</h2>
+                <hr>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Vacuum:</p>
+                        <p>${moreInfo.engines.isp.vacuum}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Vacuum kN:</p>
+                        <p>${moreInfo.engines.thrust_vacuum.kN}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Vacuum lbf:</p>
+                        <p>${moreInfo.engines.thrust_vacuum.lbf}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Sea Level:</p>
+                        <p>${moreInfo.engines.isp.sea_level}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Sea Level kN:</p>
+                        <p>${moreInfo.engines.thrust_sea_level.kN}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Sea Level lbf</p>
+                        <p>${moreInfo.engines.thrust_sea_level.lbf}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Type:</p>
+                        <p>${moreInfo.engines.type}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Number:</p>
+                        <p>${moreInfo.engines.number}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Version:</p>
+                        <p>${moreInfo.engines.version}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Layout:</p>
+                        <p>${moreInfo.engines.layout}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Loss Max:</p>
+                        <p>${moreInfo.engines.engine_loss_max}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Propellant 1:</p>
+                        <p>${moreInfo.engines.propellant_1}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Propellant 2</p>
+                        <p>${moreInfo.engines.propellant_2}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Thrust To Weight:</p>
+                        <p>${moreInfo.engines.thrust_to_weight}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div id="section__image" class="section__image">
             <img src="${moreInfo.flickr_images}"referrerpolicy="no-referrer" width=300px heigth=350px>
-        </div>
-        <div class="section__information__3">
-            <div>
-                <div class="load" style="height: 150px;"></div>
+            <div class="more__info">
+                <h4> For more info: </h4>
+                <a href="${moreInfo.wikipedia}">Wikipedia</a>
             </div>
-            <div id="information__table__2" class="information__table__2">
-                <div class="load" style="height: 160px;"></div>
+        </div>
+        <div class="section__information__2">
+            <div class="info__table2">
+                <h2>Stats in Stages</h2>
+                <hr>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Thrust kN:</p>
+                        <p>${moreInfo.second_stage.thrust.kN}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Thrust lbf:</p>
+                        <p>${moreInfo.second_stage.thrust.lbf}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Payloads Height Meters:</p>
+                        <p>${moreInfo.second_stage.payloads.composite_fairing.height.meters}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Payloads Height feets:</p>
+                        <p>${moreInfo.second_stage.payloads.composite_fairing.height.feet}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Payloads Diameter Meters:</p>
+                        <p>${moreInfo.second_stage.payloads.composite_fairing.diameter.meters}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Payloads Diameter Feets:</p>
+                        <p>${moreInfo.second_stage.payloads.composite_fairing.diameter.feet}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Option 1:</p>
+                        <p>${moreInfo.second_stage.payloads.option_1}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Number:</p>
+                        <p>${moreInfo.second_stage.reusable}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Version:</p>
+                        <p>${moreInfo.second_stage.engines}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Layout:</p>
+                        <p>${moreInfo.second_stage.fuel_amount_tons}</p>
+                    </div>
+                    <div class="data__int"> 
+                        <p>Loss Max:</p>
+                        <p>${moreInfo.second_stage.burn_time_sec}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </article>  
@@ -169,6 +238,16 @@ export const moreInfoRocket = async (moreInfo) => {
     </footer>
 `
 }
+
+export const lastInfoRocket = async (moreInfo) => {
+    console.log(moreInfo);
+    document.querySelector("#information__2").innerHTML = /*html*/`
+    <div class="load">a</div>
+    <div class="load">a</div>
+    <div class="load">a</div>
+    <div class="load">a</div>
+    <div class="load">a</div>
+`}
 
 export const infoImgsRockets = async (moreInfo) => {
     console.log(moreInfo);

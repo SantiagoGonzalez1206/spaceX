@@ -223,15 +223,7 @@ body {
         "colum__1 colum__2 colum__3";
 }
 
-.section__information__2 {
-    /* background: blue; */
-    grid-area: colum__1;
-    display: grid;
-    grid-template-rows: 1fr 1.3fr;
-    grid-template-areas:
-        "carusel__colum__1"
-        "table__colum__1";
-}
+
 
 .section__information__2 div:first-child {
     /* background: #d9ff00; */
@@ -255,6 +247,7 @@ body {
     display: flex;
     width: 95%;
     margin: 10px auto;
+    height: 20vh;
     /* background: darkblue; */
     grid-area: table__colum__1;
 }
@@ -274,6 +267,20 @@ body {
     display: flex;
     flex-direction: column;
     color: white;
+    height: 32vh;
+    padding-top: 160px;
+    width: 80%;
+    background-color: #1d1f3873;
+}
+
+.info__table2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 32vh;
+    padding-top: 80px;
+    width: 80%;
+    background-color: #1d1f3873;
 }
 
 .info__table1 hr{
@@ -284,6 +291,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 3vh;
 }
 
 .table__container__1{
@@ -307,10 +315,11 @@ body {
     /* background: orange; */
     grid-area: colum__2;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 305px;
     height: 190px;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .section__image>.carousel__item {
@@ -604,12 +613,16 @@ pointer-events: none;
     flex-direction: column;
 }
 
+.more__info{
+    margin-top: 140px;
+    font-size: 20px;
+}
+
 /* Estilo para hipervínculos no visitados */
 .more__info a:link {
     color: red;
     text-decoration: none;
     position: relative;
-    font-size: 25px;
 }
 
 /* Estilo para hipervínculos visitados */
