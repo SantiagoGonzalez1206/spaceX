@@ -159,8 +159,8 @@ export const getRocketMoreInfoById = async (id) => {
               "_id": id
             },
             "options": {
-            "select": "flickr_images engines.isp.vacuum engines.isp.sea_level first_stage.engines type cost_per_launch country wikipedia description first_flight "
-            }
+            "select": "diameter.meters diameter.feet height.meters height.feet flickr_images engines.isp.vacuum engines.isp.sea_level first_stage.engines type cost_per_launch country wikipedia description first_flight "
+            } 
         })
     };
 

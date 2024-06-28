@@ -48,21 +48,17 @@ body {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    
 }
 .load{
     background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);
     background-size: 200% 100%;
     background-position: 100% 0;
-    animation: load 2s infinite;
-    width: 100%;
+    width: 80%;
     margin: 12px 0;
     height: 100px;
 }
-@keyframes load{
-    100%{
-        background-position: -100% 0;
-    }
-}
+
 .main {
     /* background: orange; */
     height: 90vh;
@@ -83,10 +79,13 @@ body {
     justify-content: center;
     height: 75vh;
     color: white;
+    margin-right: 60px;
+    margin-left: 50px;
 }
 
 .description__all{
     text-align: center;
+    width: 100%;
 }
 
 
@@ -109,6 +108,7 @@ body {
     display: flex;
     color: var(--color-3);
     margin-left: 10px;
+    
 }
 
 .info__item p{
@@ -236,7 +236,7 @@ body {
 .section__information__2 div:first-child {
     /* background: #d9ff00; */
     grid-area: carusel__colum__1;
-    display: flex;
+    text-align: center;
     overflow-x: auto;
     gap: 10px;
     justify-content: space-evenly;
@@ -252,7 +252,8 @@ body {
 }
 
 .information__table__1 {
-    width: 85%;
+    display: flex;
+    width: 95%;
     margin: 10px auto;
     /* background: darkblue; */
     grid-area: table__colum__1;
@@ -268,6 +269,23 @@ body {
     width: 90%;
     border-color: var(--color--two);
 }
+
+.info__table1{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.info__table1 hr{
+    width: 100%;
+}
+
+.data__int{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .table__container__1{
     /* background: orange; */
     height: 160px;
@@ -584,4 +602,44 @@ pointer-events: none;
 .medio{
     display: flex;
     flex-direction: column;
+}
+
+/* Estilo para hipervínculos no visitados */
+.more__info a:link {
+    color: red;
+    text-decoration: none;
+    position: relative;
+    font-size: 25px;
+}
+
+/* Estilo para hipervínculos visitados */
+.more__info a:visited {
+    color: red;
+    text-decoration: none;
+    position: relative;
+}
+
+.more__info a:link::after, .more__info a:visited::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: blue;
+    left: 0;
+    bottom: -2px;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+/* Estilo para hipervínculos al pasar el cursor */
+.more__info a:hover::after {
+    color: red;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Estilo para hipervínculos activos (cuando se hace clic) */
+.more__info a:active {
+    color: orange;
 }
