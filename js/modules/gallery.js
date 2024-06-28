@@ -48,10 +48,10 @@ export const moreInfoRocket = async (moreInfo) => {
     <article id="section__information__1" class="section__information__1">
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.first_stage.engines}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Engines:</b>${moreInfo.first_stage.engines}<div class="interno"><div><b class="vacuum">Vacuum:<br></b><div>${moreInfo.engines.isp.vacuum}</div></div><div><b class="vacuum">Sea Level:<br></b><div class="medio">${moreInfo.engines.isp.sea_level}</div></div></div></div></div>
+        conic-gradient(from 180deg, #0400ff ${moreInfo.height.meters}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Height:</b>${moreInfo.height.meters} Meters <div class="externo">${moreInfo.height.feet} feets </div></div></div></div></div>
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff 25%, rgba(255, 192, 203, 0) 0);  "><b>Vacuum:<br><br></b>${moreInfo.engines.isp.vacuum}<br></div>
+        conic-gradient(from 180deg, #0400ff ${moreInfo.diameter.meters}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Diameter:</b>${moreInfo.diameter.meters} Meters <div class="externo">${moreInfo.diameter.feet} feets </div></div></div></div></div>
     </article>
     <article class="section__information__container">
         <div class="section__information__2">
@@ -59,7 +59,42 @@ export const moreInfoRocket = async (moreInfo) => {
                 <div class="load" style="height: 150px;">${moreInfo.type}</div>
             </div>
             <div id="information__table__1" class="information__table__1">
-                <div class="load" style="height: 160px;">${moreInfo.type}</div>
+                <div class="load" style="height: 160px;">
+                    <div class="info__table1">
+                        <h2>Engines</h2>
+                        <hr>
+                        <div class="info__data">
+                            <div class="data__int">
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                            <div class="data__int">
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                            <div class="data__int">
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                            <div class="data__int">
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                            <div class="data__int">
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                            <div class="data__int"> 
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                            <div class="data__int">
+                                <p>si</p>
+                                <p>${moreInfo.engines.isp.vacuum}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="section__image" class="section__image">
