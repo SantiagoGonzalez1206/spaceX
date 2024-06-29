@@ -1,4 +1,3 @@
-
 export const idRocket = async () => {
     let config = {
         headers: {
