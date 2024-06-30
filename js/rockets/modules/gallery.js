@@ -242,9 +242,27 @@ export const moreInfoRocket = async (moreInfo) => {
 export const lastInfoRocket = async (moreInfo) => {
     console.log(moreInfo);
     document.querySelector("#information__2").innerHTML = /*html*/`
-    <div class="load">a</div>
-    <div class="load">a</div>
-    <div class="load">a</div>
+        
+    <div class="bar">   
+        <div class="up__item1">
+            <p>SAVINGS<p>
+            <div class="number">
+                <small>$</small>
+                <h1>1'252.000</h1>
+            </div>
+            <progress id="color" value="80" max="100"></progress>
+        </div>
+    </div>
+        <div class="load">
+            <div class="up__item2"> 
+            <p>ASSETS</p>
+                <div class="number">
+                    <small>$</small>
+                    <h1>348.900</h1>
+                </div>
+                <progress id="grey" value="30" max="100"></progress>
+        </div>
+    </div>
     <div class="load">a</div>
     <div class="load">a</div>
 `}
