@@ -48,6 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    margin-left: -10px;
     
 }
 .load{
@@ -278,11 +279,27 @@ body {
 .info__table2{
     display: flex;
     flex-direction: column;
+    text-align: center;
     color: white;
     height: 32vh;
     padding-top: 80px;
     width: 80%;
     background-color: #1d1f3873;
+}
+
+.info__table2 p{
+}
+
+.info__table2cap{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    height: 15vh;
+    width: 80%;
+    background-color: #1d1f3873;
+    margin-bottom: 50px;
 }
 
 .info__table1 hr{
@@ -293,7 +310,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 3vh;
+    height: 5vh;
+    width: 325px;
 }
 
 .table__container__1{
@@ -467,7 +485,7 @@ body {
 }
 .nav__information {
     /* background: red; */
-    grid-area: nav__2;
+    width: 90%;
 }
 
 .information__item {
@@ -479,19 +497,15 @@ body {
 .information__buttom {
     /* background: #00ff84; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110px;
-    width: 250px;
-    overflow-x: scroll;
-    padding-left: 60px;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 260px;
+    scroll-behavior: smooth;  
+    padding-bottom: 20px;         
 }
 
-#paginacion{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    overflow-x: scroll;
+.information__buttom ::-webkit-scrollbar {
+    display: none;             /* Para Chrome, Safari y Opera */
 }
 
 
@@ -503,7 +517,7 @@ body {
     color: var(--color--five);
     text-decoration: none;
     padding: 8px 16px;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .buttom__paginacion a.activo {
@@ -574,17 +588,12 @@ progress[value]::-moz-progress-bar {
     background: var(--color);
 }
 
-.information__buttom {
-    display: flex;
-    justify-content: center;
-  }
-  
 .information__buttom a {
 color: var(--color--four);
+transition: background-color 0.3s, color 0.3s;
+text-decoration: none;
 float: left;
 padding: 8px 16px;
-text-decoration: none;
-transition: background-color 0.3s, color 0.3s;
 border: 1px solid #ddd;
 margin: 0 4px;
 border-radius: 50%;
@@ -708,12 +717,8 @@ progress {
     margin-bottom: 50px;
 }
 
-.rocket{
-    background-color: #0011ff;
-}
 
 .capsules{
-    background-color: green;
     display: flex;
     flex-direction: column;
     text-align: center;
