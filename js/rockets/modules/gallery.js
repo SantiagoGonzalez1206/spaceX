@@ -174,20 +174,20 @@ export const moreInfoRocket = async (moreInfo) => {
     <footer class="footer">
         <ul>
             <li>
-                <button class="rocket">
+                <div class="rocket">
                     <a href="#">
                         <img src="./storage/imgs/icons/rocket.svg">
                         <span>Rockets</span>
                     </a>
-                </button>
+                </div>
             </li>
             <li>
-                <button class="capsules"
+                <div class="capsules">
                     <a href="#">
                         <img src="./storage/imgs/icons/capsule.svg">
                         <span>Capsules</span>
                     </a>
-                </button>
+                </div>
             </li>
             <li id="company">
                 <a href="#">
@@ -256,6 +256,7 @@ export const lastInfoRocket = async (moreInfo) => {
                 <progress id="grey" value="${moreInfo.success_rate_pct}" max="100"></progress>
         </div>
     </div>
+    
 `}
 
 export const infoImgsRockets = async (moreInfo) => {

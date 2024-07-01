@@ -1,5 +1,5 @@
 import { getCapsuleMoreInfoById, getCapsuleSerialById, idCapsule } from "../modules/info.js";
-import { infoCapsule, serialCapsule } from "../modules/gallery.js";
+import { moreInfoCapsule, serialCapsule } from "../modules/gallery.js";
 
 export const paginationCapsules = async () => {
     const capsules = await idCapsule();
@@ -17,7 +17,7 @@ export const initCapsules = async() => {
     const capsuleMoreInfo = await getCapsuleMoreInfoById("5e9e2c5bf35918ed873b2664");
     
     await serialCapsule(capsuleName);
-    await infoCapsule(capsuleMoreInfo)
+    await moreInfoCapsule(capsuleMoreInfo)
 
 
 }
@@ -33,7 +33,7 @@ export const setupPaginationCapsules = async () => {
         console.log(capsuleMoreInfo);
 
         await serialCapsule(capsuleName);
-        await infoCapsule(capsuleMoreInfo)
+        await moreInfoCapsule(capsuleMoreInfo)
     
         
     });

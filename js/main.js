@@ -2,6 +2,7 @@ import { paginationRockets, setupPagination, initRockets } from "./rockets/compo
 import { paginationCapsules, setupPaginationCapsules, initCapsules } from "./capsules/components/pagination.js";
 
 
+
 const rocketElement = document.querySelector(".rocket");
 const capsuleElement = document.querySelector(".capsules")
 
@@ -28,7 +29,10 @@ const handleCapsulesClick = async (e) => {
 }
 
 document.addEventListener("DOMContentLoaded", async (e) => {
-    handleRocketClick()
+
+    rocketElement.addEventListener("click", (e)=>{
+        handleRocketClick()
+    })
 
     capsuleElement.addEventListener("click", (e)=>{
         handleCapsulesClick()
