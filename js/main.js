@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     handleRocketClick()
 
     capsuleElement.addEventListener("click", (e)=>{
-        initCapsules()
+        handleCapsulesClick()
     });
 
 });
