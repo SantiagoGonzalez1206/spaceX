@@ -12,7 +12,7 @@ export const paginationRockets = async () => {
     return html.join("");
 }
 
-    export const asd = async() => {
+    export const initRockets = async() => {
 
         const rocketName = await getRocketNameById("5e9d0d95eda69955f709d1eb")
         const rocketMoreInfo = await getRocketMoreInfoById("5e9d0d95eda69955f709d1eb");
@@ -40,7 +40,5 @@ export const setupPagination = async () => {
         await infoRocket(rocketMoreInfo);
         await moreInfoRocket(rocketMoreInfo)
         await lastInfoRocket(rocketMoreInfo)
-    
-        
     });
 }
