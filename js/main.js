@@ -1,18 +1,37 @@
-import { paginationRockets, setupPagination, asd } from "./rockets/components/pagination.js";
-import { paginationCapsules, setupPaginationC, asda } from "./capsules/components/pagination.js";
+import { paginationRockets, setupPagination, initRockets } from "./rockets/components/pagination.js";
+import { paginationCapsules, setupPaginationCapsules, initCapsules } from "./capsules/components/pagination.js";
 
-asd();
 
-document.addEventListener("DOMContentLoaded", async () => {
+const rocketElement = document.querySelector(".rocket");
+const capsuleElement = document.querySelector(".capsules")
 
+
+export const clearInformation = () => {
+    document.querySelector("#header__title").innerHTML = "";
+    document.querySelector("#description__item").innerHTML = "";
+    document.querySelector("#main__section").innerHTML = "";
+    document.querySelector("#information__2").innerHTML = "";
+}
+
+const handleRocketClick = async (e) => {
+    await clearInformation();
+    await initRockets()
     document.querySelector("#paginacion").innerHTML = await paginationRockets();
-    let capsules = document.querySelector("#capsules")
-    capsules.addEventListener("click", (e)=>{
-        asda()
-        document.querySelector("#paginacion").innerHTML = paginationCapsules();
+    await setupPagination();
+}
 
-        setupPaginationC()
+const handleCapsulesClick = async (e) => {
+    await clearInformation();
+    await initCapsules()
+    document.querySelector("#paginacion").innerHTML = await paginationCapsules();
+    await setupPaginationCapsules();
+}
+
+document.addEventListener("DOMContentLoaded", async (e) => {
+    handleRocketClick()
+
+    capsuleElement.addEventListener("click", (e)=>{
+        initCapsules()
     });
 
-    setupPagination()
 });

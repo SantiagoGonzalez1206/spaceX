@@ -20,13 +20,6 @@ export const infoRocket = async (moreInfo) => {
                 <div class="info__item">
                     <img src="storage/imgs/icons/numero2.png">
                     <div class="info__item_text">  
-                        <h4>Cost Per Launch</h4>
-                        <p>$${moreInfo.cost_per_launch}</p>
-                    </div>
-                </div>
-                <div class="info__item">
-                    <img src="storage/imgs/icons/numero3.png">
-                    <div class="info__item_text">  
                         <h4>First Flight</h4>
                         <p>${moreInfo.first_flight}</p>
                     </div>
@@ -180,17 +173,21 @@ export const moreInfoRocket = async (moreInfo) => {
     </article>  
     <footer class="footer">
         <ul>
-            <li id="rocket">
-                <a class="select" href="#">
-                    <img src="./storage/imgs/icons/rocket.svg">
-                    <span>Rockets</span>
-                </a>
+            <li>
+                <button class="rocket">
+                    <a href="#">
+                        <img src="./storage/imgs/icons/rocket.svg">
+                        <span>Rockets</span>
+                    </a>
+                </button>
             </li>
-            <li id="capsules">
-                <a href="#">
-                    <img src="./storage/imgs/icons/capsule.svg">
-                    <span>Capsules</span>
-                </a>
+            <li>
+                <button class="capsules"
+                    <a href="#">
+                        <img src="./storage/imgs/icons/capsule.svg">
+                        <span>Capsules</span>
+                    </a>
+                </button>
             </li>
             <li id="company">
                 <a href="#">
@@ -245,26 +242,20 @@ export const lastInfoRocket = async (moreInfo) => {
         
     <div class="bar">   
         <div class="up__item1">
-            <p>SAVINGS<p>
+            <p>Cost Per Launch<p>
             <div class="number">
-                <small>$</small>
-                <h1>1'252.000</h1>
+                <h1>$${moreInfo.cost_per_launch}</h1>
             </div>
-            <progress id="color" value="80" max="100"></progress>
+            <progress id="color" value="${(moreInfo.cost_per_launch)/1000000}" max="100"></progress>
         </div>
-    </div>
-        <div class="load">
             <div class="up__item2"> 
-            <p>ASSETS</p>
+            <p>Succes Rate PCT</p>
                 <div class="number">
-                    <small>$</small>
-                    <h1>348.900</h1>
+                    <h1>${moreInfo.success_rate_pct}</h1>
                 </div>
-                <progress id="grey" value="30" max="100"></progress>
+                <progress id="grey" value="${moreInfo.success_rate_pct}" max="100"></progress>
         </div>
     </div>
-    <div class="load">a</div>
-    <div class="load">a</div>
 `}
 
 export const infoImgsRockets = async (moreInfo) => {

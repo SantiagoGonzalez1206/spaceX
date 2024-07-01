@@ -1,5 +1,5 @@
 import { getCapsuleMoreInfoById, getCapsuleSerialById, idCapsule } from "../modules/info.js";
-import { serialCapsule } from "../modules/gallery.js";
+import { infoCapsule, serialCapsule } from "../modules/gallery.js";
 
 export const paginationCapsules = async () => {
     const capsules = await idCapsule();
@@ -11,28 +11,29 @@ export const paginationCapsules = async () => {
     return html.join("");
 }
 
-export const asda = async() => {
+export const initCapsules = async() => {
 
     const capsuleName = await getCapsuleSerialById("5e9e2c5bf35918ed873b2664")
     const capsuleMoreInfo = await getCapsuleMoreInfoById("5e9e2c5bf35918ed873b2664");
     
     await serialCapsule(capsuleName);
+    await infoCapsule(capsuleMoreInfo)
 
 
 }
 
-export const setupPaginationC = async () => {
+export const setupPaginationCapsules = async () => {
     document.querySelector("#paginacion").addEventListener("click", async (e) => {
         e.preventDefault();
         const id = e.target.dataset.id;
 
-        // Rockets
         const capsuleName = await getCapsuleSerialById(id)
         const capsuleMoreInfo = await getCapsuleMoreInfoById(id);
     
         console.log(capsuleMoreInfo);
 
         await serialCapsule(capsuleName);
+        await infoCapsule(capsuleMoreInfo)
     
         
     });
