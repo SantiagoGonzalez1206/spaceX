@@ -78,12 +78,6 @@ export const moreInfoCapsule = async (moreInfo) => {
                     </a>
                 </div>
             </li>
-            <li id="company">
-                <a href="#">
-                    <img src="./storage/imgs/icons/company.png">
-                    <span>Company</span>
-                </a>
-            </li>
             <li id="cores">
                 <a href="#">
                     <img src="./storage/imgs/icons/cores.png">
