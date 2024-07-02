@@ -2,6 +2,7 @@ import { paginationRockets, setupPagination, initRockets } from "./rockets/compo
 import { paginationCapsules, setupPaginationCapsules, initCapsules } from "./capsules/components/pagination.js";
 import { initCores, paginationCores, setupPaginationCores } from "./cores/components/pagination.js";
 import { initCrew, paginationCrew, setupPaginationCrew } from "./crew/components/pagination.js";
+import { initDragon, paginationDragon, setupPaginationDragon } from "./dragons/components/pagination.js";
 
 
 
@@ -9,6 +10,7 @@ const rocketElement = document.querySelector(".rocket");
 const capsuleElement = document.querySelector(".capsules")
 const coreElement = document.querySelector(".cores")
 const crewElement = document.querySelector(".crew")
+const dragonElement = document.querySelector(".dragons")
 
 
 export const clearInformation = () => {
@@ -47,6 +49,13 @@ const handleCrewClick = async (e) => {
     await setupPaginationCrew();
 }
 
+const handleDragonClick = async (e) => {
+    await clearInformation();
+    await initDragon()
+    document.querySelector("#paginacion").innerHTML = await paginationDragon();
+    await setupPaginationDragon();
+}
+
 
 
 document.addEventListener("DOMContentLoaded", async (e) => {
@@ -65,6 +74,10 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     crewElement.addEventListener("click", (e)=>{
         handleCrewClick()
+    })
+
+    dragonElement.addEventListener("click", (e)=>{
+        handleDragonClick()
     })
 
 });

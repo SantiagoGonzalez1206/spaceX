@@ -277,7 +277,7 @@ body {
 }
 .information__table__1 hr{
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     border-color: var(--color--two);
 }
 
@@ -286,8 +286,7 @@ body {
     flex-direction: column;
     color: white;
     height: 32vh;
-    padding-top: 160px;
-    width: 80%;
+    width: 82%;
     background-color: #1d1f3873;
 }
 
@@ -297,8 +296,7 @@ body {
     text-align: center;
     color: white;
     height: 32vh;
-    padding-top: 80px;
-    width: 80%;
+    width: 85%;
     background-color: #1d1f3873;
 }
 
@@ -339,7 +337,7 @@ body {
 }
 
 .info__table1 hr{
-    width: 100%;
+    width: 95%;
 }
 
 .data__int{
