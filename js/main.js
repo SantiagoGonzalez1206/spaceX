@@ -3,6 +3,7 @@ import { paginationCapsules, setupPaginationCapsules, initCapsules } from "./cap
 import { initCores, paginationCores, setupPaginationCores } from "./cores/components/pagination.js";
 import { initCrew, paginationCrew, setupPaginationCrew } from "./crew/components/pagination.js";
 import { initDragon, paginationDragon, setupPaginationDragon } from "./dragons/components/pagination.js";
+import { initHistory, paginationHistory, setupPaginationHistory } from "./history/components/pagination.js";
 
 
 
@@ -11,6 +12,8 @@ const capsuleElement = document.querySelector(".capsules")
 const coreElement = document.querySelector(".cores")
 const crewElement = document.querySelector(".crew")
 const dragonElement = document.querySelector(".dragons")
+const historyElement = document.querySelector(".history")
+
 
 
 export const clearInformation = () => {
@@ -56,6 +59,14 @@ const handleDragonClick = async (e) => {
     await setupPaginationDragon();
 }
 
+const handleHistoryClick = async (e) => {
+    await clearInformation();
+    await initHistory()
+    document.querySelector("#paginacion").innerHTML = await paginationHistory();
+    await setupPaginationHistory();
+}
+
+
 
 
 document.addEventListener("DOMContentLoaded", async (e) => {
@@ -78,6 +89,10 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     dragonElement.addEventListener("click", (e)=>{
         handleDragonClick()
+    })
+
+    historyElement.addEventListener("click", (e)=>{
+        handleHistoryClick()
     })
 
 });

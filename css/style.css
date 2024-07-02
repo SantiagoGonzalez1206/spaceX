@@ -145,6 +145,18 @@ body {
     font-size: 25px;
 }
 
+.more__infoHis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.more__infoHis h4{
+    font-size: 25px;
+}
+
 .description__buttom {
     /* background: #00ff84; */
     display: flex;
@@ -777,11 +789,55 @@ pointer-events: none;
 }
 
 
+.more__infoHis{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+/* Estilo para hipervínculos no visitados */
+.more__infoHis a:link {
+    color: red;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Estilo para hipervínculos visitados */
+.more__infoHis a:visited {
+    color: red;
+    text-decoration: none;
+    position: relative;
+}
+
+.more__infoHis a:link::after, .more__infoHis a:visited::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: blue;
+    left: 0;
+    bottom: -2px;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+/* Estilo para hipervínculos al pasar el cursor */
+.more__infoHis a:hover::after {
+    color: red;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Estilo para hipervínculos activos (cuando se hace clic) */
+.more__infoHis a:active {
+    color: orange;
+}
+
 
 progress {
     background-color: white;
     border-radius: 10px;
-    width: 305px;
+    width: 270px;
     height: 15px;
   }
   
@@ -858,6 +914,16 @@ progress {
     height: 190px;
     margin-left: 70px;
 
+}
+
+.section__image2{
+    grid-area: colum__2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 305px;
+    height: 190px;
+    margin-left: 290px;
 }
 
 .si{
