@@ -11,7 +11,7 @@ export const idDragon = async () => {
         })
     };
 
-    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    let res = await fetch("https://api.spacexdata.com/v4/dragons/query", config);
     let { docs } = await res.json();
     return docs
 };
@@ -31,7 +31,7 @@ export const nameDragon = async () => {
         })
     };
 
-    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    let res = await fetch("https://api.spacexdata.com/v4/dragons/query", config);
     let { docs } = await res.json();
     return docs
 };
@@ -54,7 +54,7 @@ export const getDragonNameById = async (id) => {
         })
     };
     
-    const res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    const res = await fetch("https://api.spacexdata.com/v4/dragons/query", config);
     const { docs } = await res.json();
     return docs.length > 0 ? docs[0].name : "Not found";
 }
@@ -71,11 +71,11 @@ export const getDragonMoreInfoById = async (id) => {
               "_id": id
             },
             "options": {
-            "select": "success_rate_pct second_stage.burn_time_sec second_stage.fuel_amount_tons second_stage.engines second_stage.reusable second_stage.payloads.option_1 second_stage.payloads.composite_fairing.diameter.meters second_stage.payloads.composite_fairing.diameter.feet second_stage.payloads.composite_fairing.height.feet second_stage.payloads.composite_fairing.height.meters second_stage.thrust.lbf second_stage.thrust.kN engines.thrust_to_weight engines.propellant_2 engines.propellant_1 engines.engine_loss_max engines.layout engines.version engines.number engines.thrust_vacuum.lbf engines.thrust_vacuum.kN engines.thrust_sea_level.lbf engines.type engines.thrust_sea_level.kN mass.kg mass.lb diameter.meters diameter.feet height.meters height.feet flickr_images engines.isp.vacuum engines.isp.sea_level first_stage.engines type cost_per_launch country wikipedia description first_flight "
+            "select": "heat_shield.material heat_shield.size_meters heat_shield.temp_degrees heat_shield.dev_partner launch_payload_mass.kg launch_payload_mass.lb launch_payload_vol.cubic_meters launch_payload_vol.cubic_feet return_payload_mass.kg return_payload_mass.lb return_payload_vol.cubic_meters return_payload_vol.cubic_feet pressurized_capsule.payload_volume.cubic_meters pressurized_capsule.payload_volume.cubic_feet trunk.trunk_volume.cubic_meters trunk.trunk_volume.cubic_feet trunk.cargo.solar_array trunk.cargo.unpressurized_cargo height_w_trunk.meters height_w_trunk.feet diameter.meters diameter.feet first_flight flickr_images name type active crew_capacity sidewall_angle_deg orbit_duration_yr dry_mass_kg dry_mass_lb thrusters.type thrusters.amount thrusters.pods thrusters.fuel_1 thrusters.fuel_2 thrusters.isp thrusters.thrust.kN thrusters.thrust.lbf wikipedia description id"
             } 
         })
     };
-    const res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    const res = await fetch("https://api.spacexdata.com/v4/dragons/query", config);
     const { docs } = await res.json();
     console.log(docs);
     return docs[0];

@@ -252,22 +252,3 @@ export const lastInfoRocket = async (moreInfo) => {
     </div>
     
 `}
-
-export const infoImgsRockets = async (moreInfo) => {
-    console.log(moreInfo);
-
-    console.log(moreInfo.flickr_images)
-
-    const img = async ()=>{
-        let plantilla = '';
-        let imagenes = moreInfo.flickr_images;
-        imagenes.forEach(element => {
-        plantilla +=/*html*/`<img src= ${element} referrerpolicy="no-referrer">;`
-        });
-        return plantilla;
-    }
-
-
-    console.log(await img());
-
-};
