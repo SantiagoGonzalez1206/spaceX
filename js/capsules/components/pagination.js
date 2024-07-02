@@ -16,7 +16,7 @@ export const initCapsules = async() => {
     const capsuleName = await getCapsuleSerialById("5e9e2c5bf35918ed873b2664")
     const capsuleMoreInfo = await getCapsuleMoreInfoById("5e9e2c5bf35918ed873b2664");
     
-    await serialCapsule(capsuleMoreInfo);
+    await serialCapsule(capsuleName);
     await moreInfoCapsule(capsuleMoreInfo)
 
 
@@ -32,7 +32,7 @@ export const setupPaginationCapsules = async () => {
     
         console.log(capsuleMoreInfo);
 
-        await serialCapsule(capsuleMoreInfo);
+        await serialCapsule(capsuleName);
         await moreInfoCapsule(capsuleMoreInfo)
     
         

@@ -4,6 +4,7 @@ import { initCores, paginationCores, setupPaginationCores } from "./cores/compon
 import { initCrew, paginationCrew, setupPaginationCrew } from "./crew/components/pagination.js";
 import { initDragon, paginationDragon, setupPaginationDragon } from "./dragons/components/pagination.js";
 import { initHistory, paginationHistory, setupPaginationHistory } from "./history/components/pagination.js";
+import { initLandpad, paginationLandpad, setupPaginationLandpad } from "./landpads/components/pagination.js";
 
 
 
@@ -13,6 +14,8 @@ const coreElement = document.querySelector(".cores")
 const crewElement = document.querySelector(".crew")
 const dragonElement = document.querySelector(".dragons")
 const historyElement = document.querySelector(".history")
+const landpadElement = document.querySelector(".landpads")
+
 
 
 
@@ -66,7 +69,12 @@ const handleHistoryClick = async (e) => {
     await setupPaginationHistory();
 }
 
-
+const handleLandpadClick = async (e) => {
+    await clearInformation();
+    await initLandpad()
+    document.querySelector("#paginacion").innerHTML = await paginationLandpad();
+    await setupPaginationLandpad();
+}
 
 
 document.addEventListener("DOMContentLoaded", async (e) => {
@@ -93,6 +101,10 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     historyElement.addEventListener("click", (e)=>{
         handleHistoryClick()
+    })
+
+    landpadElement.addEventListener("click", (e)=>{
+        handleLandpadClick()
     })
 
 });

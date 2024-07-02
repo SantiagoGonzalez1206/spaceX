@@ -2,8 +2,6 @@ import { infoDragon, moreInfoDragon, nameDragon } from "../modules/gallery.js";
 import { getDragonMoreInfoById, getDragonNameById, idDragon } from "../modules/info.js";
 
 
-
-
 export const paginationDragon = async () => {
     const rockets = await idDragon();
     const html = rockets.map((rocket, index) => {
