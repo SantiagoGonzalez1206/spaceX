@@ -84,7 +84,7 @@ export const moreInfoLaunch = async (moreInfo) => {
                 <h2>Launch Data</h2>
                 <hr>
                 <div class="info__data">
-                    <div class="data__int">
+                    <div class="data__int1">
                         <p>${moreInfo.details}</p>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import { initDragon, paginationDragon, setupPaginationDragon } from "./dragons/c
 import { initHistory, paginationHistory, setupPaginationHistory } from "./history/components/pagination.js";
 import { initLandpad, paginationLandpad, setupPaginationLandpad } from "./landpads/components/pagination.js";
 import { initLaunch, paginationLaunch, setupPaginationLaunch } from "./launches/components/pagination.js";
+import { initLaunchpad, paginationLaunchpad, setupPaginationLaunchpad } from "./launchpads/components/pagination.js";
 
 
 
@@ -17,6 +18,7 @@ const dragonElement = document.querySelector(".dragons")
 const historyElement = document.querySelector(".history")
 const landpadElement = document.querySelector(".landpads")
 const launchElement = document.querySelector(".launches")
+const launchpadElement = document.querySelector(".launchpads")
 
 
 
@@ -85,6 +87,13 @@ const handleLaunchClick = async (e) => {
     await setupPaginationLaunch();
 }
 
+const handleLaunchpadClick = async (e) => {
+    await clearInformation();
+    await initLaunchpad()
+    document.querySelector("#paginacion").innerHTML = await paginationLaunchpad();
+    await setupPaginationLaunchpad();
+}
+
 
 document.addEventListener("DOMContentLoaded", async (e) => {
 
@@ -120,4 +129,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
         handleLaunchClick()
     })
 
+    launchpadElement.addEventListener("click", (e)=>{
+        handleLaunchpadClick()
+    })
 });
