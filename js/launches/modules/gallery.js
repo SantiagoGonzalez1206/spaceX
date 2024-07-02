@@ -42,25 +42,32 @@ export const moreInfoLaunch = async (moreInfo) => {
     console.log(moreInfo);
     document.querySelector("#main__section").innerHTML = /*html*/`
     <article id="section__information__1" class="section__information__1">
-        <div class="item__progress__bar" style="background: 
-        radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.flight_number}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Height:</b>${moreInfo.flight_number}</div></div>
-        <div class="item__progress__bar" style="background: 
-        radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.flight_number}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Diameter:</b>${moreInfo.flight_number}</div></div>
-        <div class="item__progress__bar" style="background: 
-        radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.flight_number}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Mass:</b>${moreInfo.flight_number}</div></div>
+        <img src="${moreInfo.links.flickr.original}"referrerpolicy="no-referrer" width=300px heigth=150px>
     </article>
     <article class="section__information__container">
         <div class="section__information__2">
-            <div class="info__table1">
-                <h2>Engines</h2>
+            <div class="info__table8">
+                <h2>Links</h2>
                 <hr>
                 <div class="info__data">
                     <div class="data__int">
-                        <p>Vacuum:</p>
-                        <p>${moreInfo.flight_number}</p>
+                        <a href="${moreInfo.links.presskit}">Presskit</a>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <a href="${moreInfo.links.webcast}">Webcast:</a>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Youtube ID:</p>
+                        <p>${moreInfo.links.youtube_id}</p>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <a href="${moreInfo.links.article}">Article:</a>
                     </div>
                 </div>
             </div>
@@ -73,13 +80,12 @@ export const moreInfoLaunch = async (moreInfo) => {
             </div>
         </div>
         <div class="section__information__2">
-            <div class="info__table2">
-                <h2>Stats in Stages</h2>
+            <div class="info__table8">
+                <h2>Launch Data</h2>
                 <hr>
                 <div class="info__data">
                     <div class="data__int">
-                        <p>Thrust kN:</p>
-                        <p>${moreInfo.flight_number}</p>
+                        <p>${moreInfo.details}</p>
                     </div>
                 </div>
             </div>

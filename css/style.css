@@ -310,6 +310,7 @@ body {
     height: 32vh;
     width: 82%;
     background-color: #1d1f3873;
+    padding-top: 380px;
 }
 
 .info__table2{
@@ -320,6 +321,7 @@ body {
     height: 32vh;
     width: 85%;
     background-color: #1d1f3873;
+    padding-top: 380px;
 }
 
 
@@ -362,12 +364,21 @@ body {
     width: 95%;
 }
 
+.info__table8{
+    color: white;
+    height: 25vh;
+    width: 95%;
+    background-color: #1d1f3873;
+    text-align: center;
+
+}
+
 .data__int{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 5vh;
-    width: 325px;
+    height: 20vh;
+    width: 350px;
 }
 
 .table__container__1{
@@ -951,3 +962,12 @@ progress {
 
 }
 
+.info__item8{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    height: 32vh;
+    width: 85%;
+    background-color: #1d1f3873;
+}
