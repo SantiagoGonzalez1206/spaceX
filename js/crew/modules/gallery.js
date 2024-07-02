@@ -30,62 +30,81 @@ export const moreInfoCrew = async (moreInfo) => {
     </article>  
     <footer class="footer">
         <ul>
-            <li>
-                <div class="rocket">
-                    <a href="#">
-                        <img src="./storage/imgs/icons/rocket.svg">
-                        <span>Rockets</span>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="capsules">
-                    <a href="#">
-                        <img src="./storage/imgs/icons/capsule.svg">
-                        <span>Capsules</span>
-                    </a>
-                </div>
-            </li>
-            <li id="company">
+            <li class="rocket">
                 <a href="#">
-                    <img src="./storage/imgs/icons/company.png">
-                    <span>Company</span>
+                    <img src="./storage/imgs/icons/rocket.svg">
+                    <span>Rockets</span>
                 </a>
             </li>
-            <li id="cores">
+            <li class="capsules">
+                <a href="#">
+                    <img src="./storage/imgs/icons/capsule.svg">
+                    <span>Capsules</span>
+                </a> 
+            </li>
+            <li class="cores">
                 <a href="#">
                     <img src="./storage/imgs/icons/cores.png">
                     <span>Cores</span>
-                </a>
+                </a> 
             </li>
-            <li id="crew">
-                <a href="#">
+            <li class="crew">
+                    <a href="#">
                     <img src="./storage/imgs/icons/crew.png">
                     <span>Crew</span>
-                </a>
-            </li>
-            <li id="dragons">
+                </a> 
+            <li class="dragons">
                 <a href="#">
                     <img src="./storage/imgs/icons/dragons.png">
                     <span>Dragons</span>
                 </a>
             </li>
-            <li id="history">
+            <li class="history">
                 <a href="#">
                     <img src="./storage/imgs/icons/history.png">
                     <span>History</span>
                 </a>
             </li>
-            <li id="landpads">
+            <li class="landpads">
                 <a href="#">
                     <img src="./storage/imgs/icons/landpads.png">
                     <span>Landpads</span>
                 </a>
             </li>
-            <li id="launches">
+            <li class="launches">
                 <a href="#">
                     <img src="./storage/imgs/icons/launches.png">
                     <span>Launches</span>
+                </a>
+            </li>
+            <li class="launchpads">
+                <a href="#">
+                    <img src="./storage/imgs/icons/launchpad.png">
+                    <span>Launchpads</span>
+                </a>
+            </li>
+            <li class="payloads">
+                <a href="#">
+                    <img src="./storage/imgs/icons/payload.png">
+                    <span>Payloads</span>
+                </a>
+            </li>
+            <li class="roadster">
+                <a href="#">
+                    <img src="./storage/imgs/icons/roadster.png">
+                    <span>Roadster</span>
+                </a>
+            </li>
+            <li class="ships">
+                <a href="#">
+                    <img src="./storage/imgs/icons/ship.png">
+                    <span>Ships</span>
+                </a>
+            </li>
+            <li class="starlink">
+                <a href="#">
+                    <img src="./storage/imgs/icons/starlink.png">
+                    <span>Starlink</span>
                 </a>
             </li>
         </ul>
