@@ -135,6 +135,16 @@ body {
     font-size: 25px;
 }
 
+.more__infoCrew{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.more__infoCrew h4{
+    font-size: 25px;
+}
+
 .description__buttom {
     /* background: #00ff84; */
     display: flex;
@@ -211,6 +221,9 @@ body {
         transparent 0);   
     background: #0011ff;
   }
+
+
+
 .progress__value{
     display: flex;
     flex-direction: column;
@@ -226,7 +239,9 @@ body {
         "colum__1 colum__2 colum__3";
 }
 
-
+.section__information__2Cores{
+    margin-left: 290px;
+}
 
 .section__information__2 div:first-child {
     /* background: #d9ff00; */
@@ -287,8 +302,6 @@ body {
     background-color: #1d1f3873;
 }
 
-.info__table2 p{
-}
 
 .info__table2cap{
     display: flex;
@@ -300,6 +313,29 @@ body {
     width: 80%;
     background-color: #1d1f3873;
     margin-bottom: 50px;
+}
+
+.info__table1Crew{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    height: 10vh;
+    background-color: #1d1f38ba;
+    border-radius: 30px;
+    color: white;
+    margin-left: 95px;
+}
+
+.info__table2Crew{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    height: 10vh;
+    background-color: #1d1f38ba;
+    border-radius: 30px;
+    color: white;
 }
 
 .info__table1 hr{
@@ -355,6 +391,16 @@ body {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0px 0px 10px var(--color--one);
+}
+
+.section__imageCrew{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 305px;
+    height: 190px;
+    margin-left: 20px;
+
 }
 
 .section__information__3 {
@@ -679,6 +725,59 @@ pointer-events: none;
     color: orange;
 }
 
+.more__infoCrew{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 95px;
+    color: white;
+
+}
+
+.more__infoCrew h4{
+    font-size: 30px;
+}
+
+/* Estilo para hipervínculos no visitados */
+.more__infoCrew a:link {
+    color: red;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Estilo para hipervínculos visitados */
+.more__infoCrew a:visited {
+    color: red;
+    text-decoration: none;
+    position: relative;
+}
+
+.more__infoCrew a:link::after, .more__infoCrew a:visited::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: blue;
+    left: 0;
+    bottom: -2px;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+/* Estilo para hipervínculos al pasar el cursor */
+.more__infoCrew a:hover::after {
+    color: red;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Estilo para hipervínculos activos (cuando se hace clic) */
+.more__infoCrew a:active {
+    color: orange;
+}
+
+
+
 progress {
     background-color: white;
     border-radius: 10px;
@@ -724,4 +823,43 @@ progress {
     text-align: center;
     align-items: center;
     color: white;
+}
+
+.serialCore{
+    font-size: 30px;
+    color: #ccc;
+}
+
+.lastUpdate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    height: 40vh;
+    margin-top: -160px;
+    color: #ccc;
+    background-color: #1d1f3873;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.lastUpdate h1{
+    margin-bottom: 20px;
+}
+
+.section__image1{
+    grid-area: colum__2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 305px;
+    height: 190px;
+    margin-left: 70px;
+
+}
+
+.si{
+    margin-bottom: 40px;
 }
