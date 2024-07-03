@@ -7,6 +7,7 @@ import { initHistory, paginationHistory, setupPaginationHistory } from "./histor
 import { initLandpad, paginationLandpad, setupPaginationLandpad } from "./landpads/components/pagination.js";
 import { initLaunch, paginationLaunch, setupPaginationLaunch } from "./launches/components/pagination.js";
 import { initLaunchpad, paginationLaunchpad, setupPaginationLaunchpad } from "./launchpads/components/pagination.js";
+import { initPayload, paginationPayload, setupPaginationPayload } from "./payloads/components/pagination.js";
 
 
 
@@ -19,6 +20,7 @@ const historyElement = document.querySelector(".history")
 const landpadElement = document.querySelector(".landpads")
 const launchElement = document.querySelector(".launches")
 const launchpadElement = document.querySelector(".launchpads")
+const payloadElement = document.querySelector(".payloads")
 
 
 
@@ -94,6 +96,12 @@ const handleLaunchpadClick = async (e) => {
     await setupPaginationLaunchpad();
 }
 
+const handlePayloadClick = async (e) => {
+    await clearInformation();
+    await initPayload()
+    document.querySelector("#paginacion").innerHTML = await paginationPayload();
+    await setupPaginationPayload();
+}
 
 document.addEventListener("DOMContentLoaded", async (e) => {
 
@@ -131,5 +139,9 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     launchpadElement.addEventListener("click", (e)=>{
         handleLaunchpadClick()
+    })
+
+    payloadElement.addEventListener("click", (e)=>{
+        handlePayloadClick()
     })
 });
