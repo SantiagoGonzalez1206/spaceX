@@ -53,6 +53,7 @@ export const moreInfoCrew = async (moreInfo) => {
                     <img src="./storage/imgs/icons/crew.png">
                     <span>Crew</span>
                 </a> 
+                <hr>
             <li class="dragons">
                 <a href="#">
                     <img src="./storage/imgs/icons/dragons.png">

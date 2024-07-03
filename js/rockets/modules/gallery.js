@@ -178,6 +178,7 @@ export const moreInfoRocket = async (moreInfo) => {
                     <img src="./storage/imgs/icons/rocket.svg">
                     <span>Rockets</span>
                 </a>
+                <hr>
             </li>
             <li class="capsules">
                 <a href="#">

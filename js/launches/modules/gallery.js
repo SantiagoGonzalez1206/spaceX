@@ -139,6 +139,7 @@ export const moreInfoLaunch = async (moreInfo) => {
                     <img src="./storage/imgs/icons/launches.png">
                     <span>Launches</span>
                 </a>
+                <hr>
             </li>
             <li class="launchpads">
                 <a href="#">

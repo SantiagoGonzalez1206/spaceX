@@ -52,6 +52,7 @@ export const moreInfoCores = async (moreInfo) => {
                     <img src="./storage/imgs/icons/cores.png">
                     <span>Cores</span>
                 </a> 
+                <hr>
             </li>
             <li class="crew">
                     <a href="#">

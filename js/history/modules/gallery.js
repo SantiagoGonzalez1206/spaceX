@@ -63,6 +63,7 @@ export const moreInfoHistory = async (moreInfo) => {
                     <img src="./storage/imgs/icons/history.png">
                     <span>History</span>
                 </a>
+                <hr>
             </li>
             <li class="landpads">
                 <a href="#">

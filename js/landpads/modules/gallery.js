@@ -126,6 +126,7 @@ export const moreInfoLandpad = async (moreInfo) => {
                     <img src="./storage/imgs/icons/landpads.png">
                     <span>Landpads</span>
                 </a>
+                <hr>
             </li>
             <li class="launches">
                 <a href="#">

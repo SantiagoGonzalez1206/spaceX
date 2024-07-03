@@ -187,6 +187,7 @@ export const moreInfoPayload = async (moreInfo) => {
                     <img src="./storage/imgs/icons/payload.png">
                     <span>Payloads</span>
                 </a>
+                <hr>
             </li>
             <li class="ships">
                 <a href="#">

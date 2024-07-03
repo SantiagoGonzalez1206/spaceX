@@ -73,6 +73,7 @@ export const moreInfoCapsule = async (moreInfo) => {
                     <img src="./storage/imgs/icons/capsule.svg">
                     <span>Capsules</span>
                 </a> 
+                <hr>
             </li>
             <li class="cores">
                 <a href="#">
