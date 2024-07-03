@@ -1,34 +1,32 @@
-export const nameStarlink = async (OBJECT_NAME) => {
-    document.querySelector("#header__title").innerHTML = OBJECT_NAME;
-}
+
 
 export const infoStarlink = async (moreInfo) => {
     console.log(moreInfo);
     document.querySelector("#description__item").innerHTML = /*html*/`
-            <h3>Legacy ID</h3>
+            <h3>Comment</h3>
             <br>
-            <p class="description__all">${moreInfo.version}</p>
+            <p class="description__all">${moreInfo.spaceTrack.COMMENT}</p>
             <br>
             <div class="info">
                 <div class="info__item">
                     <img src="storage/imgs/icons/numero1.png">
                     <div class="info__item_text">  
-                        <h4>Type</h4>
-                        <p>${moreInfo.version}</p>
+                        <h4>Creation Date</h4>
+                        <p>${moreInfo.spaceTrack.CREATION_DATE}</p>
                     </div>
                 </div>
                 <div class="info__item">
                     <img src="storage/imgs/icons/numero2.png">
                     <div class="info__item_text">  
-                        <h4>Home Port</h4>
-                        <p>${moreInfo.version}</p>
+                        <h4>Object Type</h4>
+                        <p>${moreInfo.spaceTrack.OBJECT_TYPE}</p>
                     </div>
                 </div>
                 <div class="info__item">
                     <img src="storage/imgs/icons/numero3.png">
                     <div class="info__item_text">  
-                        <h4>Year Built</h4>
-                        <p>${moreInfo.version}</p>
+                        <h4>Launch Date</h4>
+                        <p>${moreInfo.spaceTrack.LAUNCH_DATE}</p>
                     </div>
                 </div>
             </div>
@@ -45,30 +43,41 @@ export const moreInfoStarlink = async (moreInfo) => {
     <article id="section__information__1" class="section__information__1">
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.mass_kg/10000}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Mass:</b>${moreInfo.mass_kg} Kg</div></div>
+        conic-gradient(from 180deg, #0400ff ${moreInfo.spaceTrack.INCLINATION}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Inclination:</b>${moreInfo.spaceTrack.INCLINATION}</div></div>
+        <h1>${moreInfo.spaceTrack.OBJECT_NAME}</h1>
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.mass_lbs/50000}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Mass:</b>${moreInfo.mass_lbs} Lbs</div></div>    
+        conic-gradient(from 180deg, #0400ff ${moreInfo.spaceTrack.MEAN_MOTION}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Mean Motion:</b>${moreInfo.spaceTrack.MEAN_MOTION}</div></div>    
     </article>
     <article class="section__information__container">
         <div class="section__information__2">
-            <div class="item__progress__bar" style="background: 
-            radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-            conic-gradient(from 180deg, #0400ff ${moreInfo.abs/100000}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>ABS::</b>${moreInfo.abs}</div></div>    
-        </div>
-        <div id="section__image" class="section__image">
-            <img src="${moreInfo.image}" width="350px" heigth="350px" referrerpolicy="no-referrer">
-            <div class="more__info">
-                <h4> For more info: </h4>
-                <a href="${moreInfo.link}">Link</a>
+            <div class="info__table1">
+                <h2>Engines</h2>
+                <hr>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Vacuum:</p>
+                        <p>${moreInfo.spaceTrack.MEAN_MOTION}</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="section__information__2">
-            <div class="item__progress__bar1" style="background: 
-            radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-            conic-gradient(from 180deg, #0400ff ${moreInfo.class/900000}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Class:</b>${moreInfo.class}</div></div>    
+        <div id="section__image" class="section__image">
+            <img src=""referrerpolicy="no-referrer" width=300px heigth=350px>
         </div>
-    </article>  
+        <div class="section__information__2">
+            <div class="info__table2">
+                <h2>Stats in Stages</h2>
+                <hr>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Thrust kN:</p>
+                        <p>${moreInfo.spaceTrack.MEAN_MOTION}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>   
     <footer class="footer">
         <ul>
             <li class="rocket">

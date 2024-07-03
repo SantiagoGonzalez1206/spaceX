@@ -1009,3 +1009,8 @@ progress {
 .footer li:hover{
     background-color: rgba(54, 62, 85, 0.719);
 }
+
+.section__information__1 h1{
+    color: white;
+    font-size: 40px;
+}

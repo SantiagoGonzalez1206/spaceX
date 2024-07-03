@@ -49,7 +49,7 @@ export const getStarlinkNameById = async (id) => {
                 "_id": id 
             },
             "options": {
-                "select": "name"
+                "select": "spaceTrack.OBJECT_NAME"
             }
         })
     };

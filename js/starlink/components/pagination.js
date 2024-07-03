@@ -1,5 +1,5 @@
-import { infoStarlink, nameStarlink } from "../modules/gallery.js";
-import { getStarlinkMoreInfoById, getStarlinkNameById, idStarlink } from "../modules/info.js";
+import { infoStarlink, moreInfoStarlink } from "../modules/gallery.js";
+import { getStarlinkMoreInfoById, idStarlink } from "../modules/info.js";
 
 
 export const paginationStarlink= async () => {
@@ -14,12 +14,11 @@ export const paginationStarlink= async () => {
 
 export const initStarlink = async() => {
 
-    const starlinkName = await getStarlinkNameById("5eed7716096e590006985825")
     const starlinkMoreInfo = await getStarlinkMoreInfoById("5eed7716096e590006985825");
     console.log(starlinkMoreInfo);
     
-    await nameStarlink(starlinkName);
     await infoStarlink(starlinkMoreInfo);
+    await moreInfoStarlink(starlinkMoreInfo)
     
 
 
@@ -30,12 +29,11 @@ export const setupPaginationStarlink= async () => {
         e.preventDefault();
         const id = e.target.dataset.id;
 
-        const starlinkName = await getStarlinkNameById(id)
         const starlinkMoreInfo = await getStarlinkMoreInfoById(id);
         console.log(starlinkMoreInfo);
         
-        await nameStarlink(starlinkName);
         await infoStarlink(starlinkMoreInfo);
+        await moreInfoStarlink(starlinkMoreInfo)
 
     });
 }
