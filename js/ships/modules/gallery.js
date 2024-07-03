@@ -57,7 +57,7 @@ export const moreInfoShips = async (moreInfo) => {
             conic-gradient(from 180deg, #0400ff ${moreInfo.abs/100000}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>ABS::</b>${moreInfo.abs}</div></div>    
         </div>
         <div id="section__image" class="section__image">
-            <img src="${moreInfo.image}" width="400px" heigth="400px" referrerpolicy="no-referrer">
+            <img src="${moreInfo.image}" width="350px" heigth="350px" referrerpolicy="no-referrer">
             <div class="more__info">
                 <h4> For more info: </h4>
                 <a href="${moreInfo.link}">Link</a>
@@ -135,6 +135,7 @@ export const moreInfoShips = async (moreInfo) => {
                     <img src="./storage/imgs/icons/ship.png">
                     <span>Ships</span>
                 </a>
+                <hr>
             </li>
             <li class="starlink">
                 <a href="#">

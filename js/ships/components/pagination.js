@@ -1,5 +1,5 @@
 import { infoShips, moreInfoShips, nameShips } from "../modules/gallery.js";
-import {getShipsNameById, getShipsMoreInfoById} from "../modules/info.js"
+import {getShipsNameById, getShipsMoreInfoById,idShips} from "../modules/info.js"
 
 
 export const paginationShips= async () => {

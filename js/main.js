@@ -9,6 +9,7 @@ import { initLaunch, paginationLaunch, setupPaginationLaunch } from "./launches/
 import { initLaunchpad, paginationLaunchpad, setupPaginationLaunchpad } from "./launchpads/components/pagination.js";
 import { initPayload, paginationPayload, setupPaginationPayload } from "./payloads/components/pagination.js";
 import { initShips, paginationShips, setupPaginationShips } from "./ships/components/pagination.js";
+import { initStarlink, paginationStarlink, setupPaginationStarlink } from "./starlink/components/pagination.js";
 
 
 
@@ -23,6 +24,7 @@ const launchElement = document.querySelector(".launches")
 const launchpadElement = document.querySelector(".launchpads")
 const payloadElement = document.querySelector(".payloads")
 const shipsElement = document.querySelector(".ships")
+const starlinkElement = document.querySelector(".starlink")
 
 
 
@@ -112,6 +114,13 @@ const handleShipsClick = async (e) => {
     await setupPaginationShips();
 }
 
+const handleStarlinkClick = async (e) => {
+    await clearInformation();
+    await initStarlink()
+    document.querySelector("#paginacion").innerHTML = await paginationStarlink();
+    await setupPaginationStarlink();
+}
+
 document.addEventListener("DOMContentLoaded", async (e) => {
 
     rocketElement.addEventListener("click", (e)=>{
@@ -156,5 +165,9 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     shipsElement.addEventListener("click", (e)=>{
         handleShipsClick()
+    })
+
+    starlinkElement.addEventListener("click", (e)=>{
+        handleStarlinkClick()
     })
 });
