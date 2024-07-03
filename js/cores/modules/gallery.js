@@ -94,12 +94,6 @@ export const moreInfoCores = async (moreInfo) => {
                     <span>Payloads</span>
                 </a>
             </li>
-            <li class="roadster">
-                <a href="#">
-                    <img src="./storage/imgs/icons/roadster.png">
-                    <span>Roadster</span>
-                </a>
-            </li>
             <li class="ships">
                 <a href="#">
                     <img src="./storage/imgs/icons/ship.png">
