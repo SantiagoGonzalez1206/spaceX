@@ -244,7 +244,26 @@ body {
     background: #0011ff;
   }
 
-
+.item__progress__bar1{
+    color: var(--color--five);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(
+        closest-side, 
+        #1d1f38 85%, 
+        transparent 85% 100%), 
+        conic-gradient(var(--color--three) 
+        80%, 
+        transparent 0);   
+    background: #0011ff;
+    margin-left: 280px;
+}
 
 .progress__value{
     display: flex;

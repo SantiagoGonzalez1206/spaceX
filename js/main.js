@@ -8,6 +8,7 @@ import { initLandpad, paginationLandpad, setupPaginationLandpad } from "./landpa
 import { initLaunch, paginationLaunch, setupPaginationLaunch } from "./launches/components/pagination.js";
 import { initLaunchpad, paginationLaunchpad, setupPaginationLaunchpad } from "./launchpads/components/pagination.js";
 import { initPayload, paginationPayload, setupPaginationPayload } from "./payloads/components/pagination.js";
+import { initShips, paginationShips, setupPaginationShips } from "./ships/components/pagination.js";
 
 
 
@@ -21,6 +22,7 @@ const landpadElement = document.querySelector(".landpads")
 const launchElement = document.querySelector(".launches")
 const launchpadElement = document.querySelector(".launchpads")
 const payloadElement = document.querySelector(".payloads")
+const shipsElement = document.querySelector(".ships")
 
 
 
@@ -103,6 +105,13 @@ const handlePayloadClick = async (e) => {
     await setupPaginationPayload();
 }
 
+const handleShipsClick = async (e) => {
+    await clearInformation();
+    await initShips()
+    document.querySelector("#paginacion").innerHTML = await paginationShips();
+    await setupPaginationShips();
+}
+
 document.addEventListener("DOMContentLoaded", async (e) => {
 
     rocketElement.addEventListener("click", (e)=>{
@@ -143,5 +152,9 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     payloadElement.addEventListener("click", (e)=>{
         handlePayloadClick()
+    })
+
+    shipsElement.addEventListener("click", (e)=>{
+        handleShipsClick()
     })
 });
