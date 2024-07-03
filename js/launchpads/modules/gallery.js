@@ -5,16 +5,16 @@ export const nameLaunchpad = async (name) => {
 export const infoLaunchpad = async (moreInfo) => {
     console.log(moreInfo);
     document.querySelector("#description__item").innerHTML = /*html*/`
-            <h3>Description</h3>
+            <h3>Full Name</h3>
             <br>
-            <p class="description__all">${moreInfo.region}</p>
+            <p class="description__all">${moreInfo.full_name}</p>
             <br>
             <div class="info">
                 <div class="info__item">
                     <img src="storage/imgs/icons/numero1.png">
                     <div class="info__item_text">  
-                        <h4>Country</h4>
-                        <p>${moreInfo.region}</p>
+                        <h4>Status</h4>
+                        <p>${moreInfo.status}</p>
                     </div>
                 </div>
                 <div class="info__item">
@@ -38,20 +38,44 @@ export const moreInfoLaunchpads = async (moreInfo) => {
     <article id="section__information__1" class="section__information__1">
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.launch_attempts}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Height:</b>${moreInfo.launch_attempts}</div></div>
+        conic-gradient(from 180deg, #0400ff ${moreInfo.launch_attempts}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Launch Attempts:</b>${moreInfo.launch_attempts}</div></div>
         <div class="item__progress__bar" style="background: 
         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-        conic-gradient(from 180deg, #0400ff ${moreInfo.launch_successes}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Diameter:</b>${moreInfo.launch_successes}</div></div>    
+        conic-gradient(from 180deg, #0400ff ${moreInfo.launch_successes}%, rgba(255, 192, 203, 0) 0);  "><div class="externo"><b>Launch Successes:</b>${moreInfo.launch_successes}</div></div>    
     </article>
     <article class="section__information__container">
         <div class="section__information__2">
             <div class="info__table1">
-                <h2>Engines</h2>
+                <h2>Ubication</h2>
                 <hr>
                 <div class="info__data">
                     <div class="data__int">
-                        <p>Vacuum:</p>
+                        <p>Locality:</p>
+                        <p>${moreInfo.locality}</p>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Region:</p>
                         <p>${moreInfo.region}</p>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Timezone:</p>
+                        <p>${moreInfo.timezone}</p>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Latitude:</p>
+                        <p>${moreInfo.latitude}</p>
+                    </div>
+                </div>
+                <div class="info__data">
+                    <div class="data__int">
+                        <p>Longitude:</p>
+                        <p>${moreInfo.longitude}</p>
                     </div>
                 </div>
             </div>
@@ -60,16 +84,7 @@ export const moreInfoLaunchpads = async (moreInfo) => {
             
         </div>
         <div class="section__information__2">
-            <div class="info__table2">
-                <h2>Stats in Stages</h2>
-                <hr>
-                <div class="info__data">
-                    <div class="data__int">
-                        <p>Thrust kN:</p>
-                        <p>${moreInfo.region}</p>
-                    </div>
-                </div>
-            </div>
+            <img src="../storage/imgs/spaceLaunchpads.gif" width="400px" heigth="400px" >
         </div>
     </article>  
     <footer class="footer">
