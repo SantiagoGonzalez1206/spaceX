@@ -1014,3 +1014,15 @@ progress {
     color: white;
     font-size: 40px;
 }
+
+.titleEPic{
+    position: fixed;
+    bottom: 250px;
+}
+
+.arrowEpic{
+    position: fixed;
+    bottom: 110px;
+    width:100px;
+    height:150px
+}
