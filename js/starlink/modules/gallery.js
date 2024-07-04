@@ -52,27 +52,75 @@ export const moreInfoStarlink = async (moreInfo) => {
     <article class="section__information__container">
         <div class="section__information__2">
             <div class="info__table1">
-                <h2>Engines</h2>
+                <h2>Measurements</h2>
                 <hr>
                 <div class="info__data">
                     <div class="data__int">
-                        <p>Vacuum:</p>
-                        <p>${moreInfo.spaceTrack.MEAN_MOTION}</p>
+                        <p>Longitude:</p>
+                        <p>${moreInfo.longitude}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Latitude:</p>
+                        <p>${moreInfo.latitude}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Height:</p>
+                        <p>${moreInfo.height_km} km</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Velocity:</p>
+                        <p>${moreInfo.velocity_kms} km</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Eccentricity:</p>
+                        <p>${moreInfo.spaceTrack.ECCENTRICITY}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Inclination:</p>
+                        <p>${moreInfo.spaceTrack.INCLINATION}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Pericenter:</p>
+                        <p>${moreInfo.spaceTrack.ARG_OF_PERICENTER}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div id="section__image" class="section__image">
-            <img src=""referrerpolicy="no-referrer" width=300px heigth=350px>
+            <img src="../storage/imgs/spaceStarlink.gif"referrerpolicy="no-referrer" width=300px heigth=350px>
         </div>
         <div class="section__information__2">
             <div class="info__table2">
-                <h2>Stats in Stages</h2>
+                <h2>Starlink Info</h2>
                 <hr>
                 <div class="info__data">
                     <div class="data__int">
-                        <p>Thrust kN:</p>
-                        <p>${moreInfo.spaceTrack.MEAN_MOTION}</p>
+                        <p>Originator:</p>
+                        <p>${moreInfo.spaceTrack.ORIGINATOR}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Time Sistem:</p>
+                        <p>${moreInfo.spaceTrack.TIME_SYSTEM}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Classification Type:</p>
+                        <p>${moreInfo.spaceTrack.CLASSIFICATION_TYPE}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Country Code:</p>
+                        <p>${moreInfo.spaceTrack.COUNTRY_CODE}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Site:</p>
+                        <p>${moreInfo.spaceTrack.SITE}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Period:</p>
+                        <p>${moreInfo.spaceTrack.PERIOD}</p>
+                    </div>
+                    <div class="data__int">
+                        <p>Periapsis:</p>
+                        <p>${moreInfo.spaceTrack.PERIAPSIS}</p>
                     </div>
                 </div>
             </div>
