@@ -126,6 +126,10 @@ export const moreInfoPayload = async (moreInfo) => {
                 </div>
             </div>
         </div>
+        <div class="general">
+            <h2>Rockets</h2>
+            <button onclick="window.location.reload();" id="back">BACK!</button>
+        <div>
     </article>  
     <footer class="footer">
         <ul>

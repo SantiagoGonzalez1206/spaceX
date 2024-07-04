@@ -86,6 +86,10 @@ export const moreInfoLaunchpads = async (moreInfo) => {
         <div class="section__information__2">
             <img src="../storage/imgs/spaceLaunchpads.gif" width="400px" heigth="400px" >
         </div>
+        <div class="general">
+            <h2>Launchpads</h2>
+            <button onclick="window.location.reload();" id="back">BACK!</button>
+        <div>
     </article>  
     <footer class="footer">
         <ul>
